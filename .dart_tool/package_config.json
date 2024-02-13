@@ -416,12 +416,6 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "md5_file_checksum",
-      "rootUri": "file:///C:/Users/seon/AppData/Local/Pub/Cache/hosted/pub.dev/md5_file_checksum-1.0.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "mediasoup_client_flutter",
       "rootUri": "file:///C:/Users/seon/AppData/Local/Pub/Cache/hosted/pub.dev/mediasoup_client_flutter-0.8.5",
       "packageUri": "lib/",
@@ -770,7 +764,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-02-13T06:50:44.726388Z",
+  "generated": "2024-02-13T08:44:15.860892Z",
   "generator": "pub",
   "generatorVersion": "3.1.3"
 }

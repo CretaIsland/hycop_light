@@ -1,6 +1,6 @@
 name: hycop_light
 description: Hycop Framework light version
-version: 0.4.20
+version: 0.4.21
 homepage: http://www.sqisoft.com
 
 environment:
@@ -35,7 +35,7 @@ dependencies:
   encrypt: ^5.0.1
   firebase_storage: ^11.4.1
   #dart_appwrite: 10.0.0
-  md5_file_checksum: ^1.0.3
+  #md5_file_checksum: ^1.0.3
   convert: ^3.0.2
   crypto: ^3.0.2
   #flutter_dropzone: ^3.0.5
