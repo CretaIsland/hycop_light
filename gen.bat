@@ -47,7 +47,7 @@ xcopy  D:\Flutter\project\hycop\lib\hycop\account\abs_account.dart lib\hycop\acc
 xcopy  D:\Flutter\project\hycop\lib\hycop\account\account_manager.dart lib\hycop\account\.  /Y
 xcopy  D:\Flutter\project\hycop\lib\hycop\account\firebase_account.dart lib\hycop\account\.  /Y
 xcopy  D:\Flutter\project\hycop\lib\hycop\database\firebase_database.dart lib\hycop\database\.   /Y
-xcopy  D:\Flutter\project\hycop\lib\hycop\storage\firebase_storage.dart lib\hycop\storage\.   /Y
+REM xcopy  D:\Flutter\project\hycop\lib\hycop\storage\firebase_storage.dart lib\hycop\storage\.   /Y
 xcopy  D:\Flutter\project\hycop\lib\hycop\storage\storage_utils.dart lib\hycop\storage\.   /Y
 xcopy  D:\Flutter\project\hycop\lib\hycop\utils\hycop_exceptions.dart lib\hycop\utils\. /Y   
 goto end
