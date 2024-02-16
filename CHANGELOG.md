@@ -1,3 +1,5 @@
+## 0.4.23
+- ExModelType 에 host 추가
 ## 0.4.22
 - firebase_storage.dart 에서 dart:html 과 download 함수를 주석처리함.
 ## 0.4.21
