@@ -1,6 +1,7 @@
 import 'dart:convert';
 // ignore: avoid_web_libraries_in_flutter
 //import 'dart:html';
+import 'package:universal_html/html.dart';
 import 'dart:typed_data';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -194,20 +195,18 @@ class FirebaseAppStorage extends AbsStorage {
 
   @override
   Future<bool> downloadFile(String fileId, String fileName, {String bucketId = ""}) async {
-    // 안드로이드에서는 dart:html 을 쓸수 없으므로 임시로 막았음....
-
-    // try {
-    //   await initialize();
-    //   Uint8List? targetBytes = await getFileBytes(fileId, bucketId: bucketId);
-    //   String targetUrl = Url.createObjectUrlFromBlob(Blob([targetBytes]));
-    //   AnchorElement(href: targetUrl)
-    //     ..setAttribute("download", fileName)
-    //     ..click();
-    //   Url.revokeObjectUrl(targetUrl);
-    //   return true;
-    // } catch (error) {
-    //   logger.severe("error during Storage.downloadFile >> $error");
-    // }
+    try {
+      await initialize();
+      Uint8List? targetBytes = await getFileBytes(fileId, bucketId: bucketId);
+      String targetUrl = Url.createObjectUrlFromBlob(Blob([targetBytes]));
+      AnchorElement(href: targetUrl)
+        ..setAttribute("download", fileName)
+        ..click();
+      Url.revokeObjectUrl(targetUrl);
+      return true;
+    } catch (error) {
+      logger.severe("error during Storage.downloadFile >> $error");
+    }
     return false;
   }
 
@@ -265,7 +264,7 @@ class FirebaseAppStorage extends AbsStorage {
         client.withCredentials = true;
       }
 
-      var response = await client.post(Uri.parse("https://devcreta.com:553/createThumbnail"),
+      var response = await client.post(Uri.parse("${myConfig!.config.apiServerUrl}/createThumbnail"),
           headers: {"Content-type": "application/json"},
           body: jsonEncode({
             "bucketId": sourceBucketId,

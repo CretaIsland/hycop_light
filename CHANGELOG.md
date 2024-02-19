@@ -1,3 +1,9 @@
+## 0.4.26
+- universal_html 추가
+## 0.4.25
+- ExModelType 에 host 추가
+## 0.4.24
+- ExModelType 에 host 추가
 ## 0.4.23
 - ExModelType 에 host 추가
 ## 0.4.22
